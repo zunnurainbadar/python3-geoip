@@ -103,6 +103,12 @@ class IPInfo(object):
             return _native_str(self._data['city']['names']['en'])
 
     @property
+    def autonomous_system_organization(self):
+        """The Service provider name if available."""
+        if 'autonomous_system_organization' in self._data:
+            return _native_str(self._data['autonomous_system_organization'])
+
+    @property
     def subdivisions(self):
         """The subdivisions as a list of ISO codes as an immutable set."""
         return frozenset(_native_str(x['iso_code']) for x in
@@ -139,6 +145,7 @@ class IPInfo(object):
             'subdivisions': self.subdivisions,
             'timezone': self.timezone,
             'location': self.location,
+            'autonomous_system_organization':self.autonomous_system_organization
         }
 
     def get_info_dict(self):
