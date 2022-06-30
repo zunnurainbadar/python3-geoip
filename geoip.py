@@ -100,7 +100,7 @@ class IPInfo(object):
     def city(self):
         """The city name if available."""
         if 'city' in self._data:
-            return _native_str(self._data['city']['city']['names']['en'])
+            return _native_str(self._data['city']['names']['en'])
 
     @property
     def subdivisions(self):
