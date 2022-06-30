@@ -168,10 +168,14 @@ class IPInfo(object):
                 'subdivisions=%r timezone=%r location=%r>') % (
             self.ip,
             self.country,
+            self.country_code,
             self.continent,
+            self.continent_code,
+            self.city,
             self.subdivisions,
             self.timezone,
             self.location,
+            self.autonomous_system_organization,
         )
 
 
