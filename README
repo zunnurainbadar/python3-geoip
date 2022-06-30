@@ -1,3 +1,6 @@
 python3-geoip
 
+To install 
+  pip install -e git+https://github.com/zunnurainbadar/python3-geoip#egg=python3-geoip
+
 Documentation is available at https://python-geoip-yplan.readthedocs.org/en/latest/
